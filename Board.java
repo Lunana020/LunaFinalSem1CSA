@@ -5,7 +5,7 @@ public class Board{
         grid = new char[6][7];
         for(int r = 0; r<grid.length; r++){
             for(int c = 0; c<grid[0].length; c++){
-                grid[r][c] = ' ';
+                grid[r][c] = '_';
             }
         }
     }
@@ -15,7 +15,7 @@ public class Board{
     public void printBoard(){
        for(int r = 0; r<6; r++){
         for(int c = 0; c<7; c++){
-            System.out.print(grid[r][c] + " ");
+            System.out.print(grid[r][c]);
         }
         System.out.println();
        }
@@ -30,7 +30,7 @@ public class Board{
         }
 
         for(int r = grid.length-1; r>=0; r--){
-            if(grid[r][col]==' '){
+            if(grid[r][col]=='_'){
                 grid[r][col] = symbol; 
                 return true;
             }
@@ -46,7 +46,7 @@ public class Board{
         //code
         for(int r = 0; r<grid.length; r++){
             for(int c = 0; c<grid[0].length; c++){
-                //horizontal
+                //horizontal≠
                 if(c+3<grid[0].length){
                     if(grid[r][c] == symbol && grid[r][c+1]==symbol
                         && grid[r][c+2]==symbol && grid[r][c+3]==symbol
@@ -86,7 +86,7 @@ public class Board{
     public boolean isColFul(int col){
         //code
         for(int r = 0; r<grid.length; r++){
-            if(grid[r][col] == ' '){
+            if(grid[r][col] == '_'){
                 return false;
             }
         }
@@ -98,7 +98,7 @@ public class Board{
     public boolean isFull(){
         //code
         for(int c = 0; c<grid[0].length; c++){
-                if(grid[0][c]==' '){
+                if(grid[0][c]=='_'){
                     return false;
                 }
             }
