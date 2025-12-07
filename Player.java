@@ -16,7 +16,7 @@ public String getName(){
     return name;
 }
 
-//returns player symbol
+//returns player
 public char getSymbol(){
     return symbol; 
 }

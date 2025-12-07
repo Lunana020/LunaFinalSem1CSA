@@ -34,7 +34,6 @@ public class Main {
         int col = sc.nextInt();
         
         if(!board.dropPiece(col, current.getSymbol())){
-            System.out.println("This column is invalid. Please try another column.");
             continue;
         }
         if(board.checkWinner(current.getSymbol())){
